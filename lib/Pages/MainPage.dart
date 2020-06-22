@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restauranttest/Pages/DropdownLang.dart';
 import 'BottomBar.dart';
 import 'Burgers.dart';
 import 'Appetizers.dart';
@@ -6,6 +7,7 @@ import 'Pizza.dart';
 import 'Drinks.dart';
 
 class MyApp extends StatefulWidget {
+ 
   @override
   State<StatefulWidget> createState() {
     return _MyAppState();
@@ -19,6 +21,21 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     super.initState();
     _tabController = TabController(length: 4, vsync: this);
   }
+//language changing need help.
+  void _changeLanguage(Language language) {
+    Locale _temp;
+    switch (language.languageCode) {
+      case 'en':
+        _temp = Locale(language.languageCode, 'US');
+        break;
+      case 'ar':
+        _temp = Locale(language.languageCode, 'IQ');
+        break;
+      default:
+        _temp = Locale(language.languageCode, 'US');
+    }
+   // MyApp.setLocale(context, _temp);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +43,27 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         onWillPop: () async => false,
         child: Scaffold(
           appBar: AppBar(
+            actions: [
+              Padding(
+                  padding: EdgeInsets.only(right: 12.0),
+                  child: DropdownButton(
+                      onChanged: (Language language) {
+                        _changeLanguage(language);
+                      },
+                      icon: Icon(
+                        Icons.language,
+                        color: Color(0xFFC88067),
+                        size: 50,
+                      ),
+                      underline: SizedBox(),
+                      items: Language.languageList()
+                          .map<DropdownMenuItem<Language>>(
+                              (lang) => DropdownMenuItem(
+                                    value: lang,
+                                    child: Text(lang.name),
+                                  ))
+                          .toList()))
+            ],
             backgroundColor: Colors.white,
             elevation: 0.0,
             centerTitle: true,

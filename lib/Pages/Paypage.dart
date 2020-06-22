@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../db/orderModel.dart';
@@ -17,6 +18,7 @@ class Payment extends StatefulWidget {
 
 class _PaymentState extends State<Payment> {
   bool loading = false;
+
   int totalcash;
   final dbHelper = DatabaseHelper.instance;
   OrderModel m = new OrderModel();
@@ -33,19 +35,29 @@ class _PaymentState extends State<Payment> {
   Future sendtofirebase() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String _tableNumber = prefs.getString('tablenumber');
+
     setState(() {
       loading = true;
     });
     var x = await dbHelper.orders();
+
     if (x.length > 0) {
       for (int i = 0; i < x.length; i++) {
-        await DatabaseService().insertOrder(x[i][0].toString(),
-            x[i][1].toString(), x[i][2].toString(), _tableNumber);
+        //older version of to send
+        await DatabaseService().insertOrder(
+            x[i][0].toString(),
+            x[i][1].toString(),
+            x[i][2].toString(),
+            _tableNumber,
+            totalcash.toString());
       }
+
+      await DatabaseService().isWaiting(_tableNumber);
+
       setState(() {
         loading = false;
       });
-      Fluttertoast.showToast(
+      /* Fluttertoast.showToast(
         msg:
             'All the items are sent please wait while we finish cooking your food',
         toastLength: Toast.LENGTH_LONG,
@@ -53,14 +65,62 @@ class _PaymentState extends State<Payment> {
         backgroundColor: Color(0xFFC88067),
         textColor: Colors.white,
         fontSize: 40,
-      );
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return Payment();
-      }));
+      );*/
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+                title: Container(
+              width: 500,
+              height: 500,
+              child: StreamBuilder(
+                  stream: Firestore.instance
+                      .collection('waiting')
+                      .where('tablenumber', isEqualTo: _tableNumber)
+                      .snapshots(),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.active) {
+                      if (snapshot.data.documents.length == 0 ||
+                          snapshot.data.documents.length == null) {
+                        return Container(
+                          color: Colors.greenAccent,
+                          child: Center(
+                            child: Text(
+                              'Your food is done!',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 30,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        );
+                      } else if (snapshot.data.documents.length > 0) {
+                        return Container(
+                          color: Colors.redAccent,
+                          child: Center(
+                            child: Text(
+                              'Your food is still cooking',
+                              style: TextStyle(
+                                  fontFamily: 'Varela',
+                                  fontSize: 30,
+                                  color: Colors.white),
+                            ),
+                          ),
+                        );
+                      }
+                    }
+                    return Container();
+                  }),
+            ));
+          });
+      for (int i = 0; i <= x.length; i++) {
+        dbHelper.delete(i);
+      }
     } else {
       Fluttertoast.showToast(
         msg: 'Your ordering list is empty',
-        toastLength: Toast.LENGTH_LONG,
+        toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         backgroundColor: Color(0xFFC88067),
         textColor: Colors.white,

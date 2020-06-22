@@ -3,6 +3,7 @@ import 'package:restauranttest/Pages/auth.dart';
 import 'MainPage.dart';
 import 'loading.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   //Variables
-  
+
   final AuthService _auth = AuthService();
   String tablenum = '';
   String email = '';
@@ -56,9 +57,11 @@ class _LoginPageState extends State<LoginPage> {
                   width: 500,
                   child: ListView(children: <Widget>[
                     //tablenum Field
-
                     TextFormField(
                         maxLength: 2,
+                        inputFormatters: [
+                          WhitelistingTextInputFormatter.digitsOnly
+                        ],
                         onChanged: (val) {
                           setState(() {
                             tablenum = val;
@@ -76,8 +79,15 @@ class _LoginPageState extends State<LoginPage> {
                                 color: Color(0xFFCC8053),
                                 fontFamily: 'Varela',
                                 fontSize: 50)),
-                        validator: (val) =>
-                            val.isEmpty ? 'Enter a table number' : null,
+                        validator: (val) {
+                          if (val.isEmpty) {
+                            return error = 'please enter a tablenumber';
+                          } else if (val.contains(' ')) {
+                            return error =
+                                'please no empty spaces in the table number';
+                          } else
+                            return null;
+                        },
                         onSaved: (String value) {
                           tablenum = value;
                         }),
@@ -184,11 +194,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ]));
   }
-  addStringToSF() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  prefs.setString('tablenumber', tablenum);
-}
 
+  addStringToSF() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('tablenumber', tablenum);
+    prefs.setBool('isWaiting', true);
+  }
 }
 
 class MyClipper extends CustomClipper<Path> {
