@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import '../db/db.dart';
 import 'BottomBar.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -46,8 +47,8 @@ class _FoodDetail extends State<FoodDetail> {
       };
       await dbHelper.insert(row);
       Fluttertoast.showToast(
-        msg: 'Your item is added',
-        toastLength: Toast.LENGTH_LONG,
+        msg: getTranslated(context, 'Addeditem'),
+        toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         backgroundColor: Color(0xFFC88067),
         textColor: Colors.white,
@@ -56,8 +57,8 @@ class _FoodDetail extends State<FoodDetail> {
       Navigator.pop(context);
     } else {
       Fluttertoast.showToast(
-        msg: 'please add at least one item',
-        toastLength: Toast.LENGTH_LONG,
+        msg: getTranslated(context, 'Addednone'),
+        toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         backgroundColor: Color(0xFFC88067),
         textColor: Colors.white,
@@ -87,7 +88,7 @@ class _FoodDetail extends State<FoodDetail> {
               height: 20,
             ),
             Text(
-              'Fast Food',
+              getTranslated(context, 'title'),
               style: TextStyle(
                   fontFamily: 'Pacifico',
                   fontSize: 45.0,
@@ -174,7 +175,7 @@ class _FoodDetail extends State<FoodDetail> {
                                   height: 100,
                                   width:
                                       MediaQuery.of(context).size.width - 50.0,
-                                  child: Text('Price: ${widget.foodprice} IQD',
+                                  child: Text(getTranslated(context, 'Price') + ' ' + widget.foodprice + ' ' + getTranslated(context, 'IQD'),
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         shadows: [
@@ -202,7 +203,7 @@ class _FoodDetail extends State<FoodDetail> {
                                               new BorderRadius.circular(18.0),
                                           side: BorderSide(color: Colors.red)),
                                       color: Colors.white,
-                                      child: Text('Add Order',
+                                      child: Text(getTranslated(context, 'Addorder'),
                                           style: TextStyle(
                                               fontFamily: 'Varela',
                                               fontSize: 30,
@@ -229,7 +230,7 @@ class _FoodDetail extends State<FoodDetail> {
                                 Container(
                                     height: 200,
                                     width: 300,
-                                    child: Text('How many items you want?.',
+                                    child: Text(getTranslated(context, 'ItemNumber'),
                                         style: TextStyle(
                                             fontFamily: 'Varela',
                                             fontSize: 30,

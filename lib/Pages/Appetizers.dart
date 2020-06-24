@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import 'FoodDetail.dart';
 
 class Appetizers extends StatefulWidget {
@@ -30,30 +31,30 @@ class _Appetizers extends State<Appetizers> {
                   childAspectRatio: 0.8,
                   children: <Widget>[
                     _buildCard(
-                        'Fried Shrimps',
+                        getTranslated(context, 'Appetizer1name'),
                         '7000',
-                        '5 Pieces of fried shrimp with sauce and ketchup',
+                        getTranslated(context, 'Appetizer1desc'),
                         'assets/pictures/Appetizers/Fried_Shrimps.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Fries',
+                        getTranslated(context, 'Appetizer2name'),
                         '3000',
-                        'Bowl full of fries with cheese on top and ketchup',
+                        getTranslated(context, 'Appetizer2desc'),
                         'assets/pictures/Appetizers/Fries.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Garlic Bread',
+                        getTranslated(context, 'Appetizer3name'),
                         '6000',
-                        '4 Pieces of garlic bread',
+                        getTranslated(context, 'Appetizer3desc'),
                         'assets/pictures/Appetizers/GarlicBread.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Onion Rings',
+                        getTranslated(context, 'Appetizer4name'),
                         '5000',
-                        '5 Pieces of onion rings',
+                        getTranslated(context, 'Appetizer4desc'),
                         'assets/pictures/Appetizers/Onion_Rings.jpg',
                         false,
                         context),
@@ -110,7 +111,7 @@ class _Appetizers extends State<Appetizers> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Text('IQD ' + price,
+                Text(getTranslated(context, 'IQD') + ' ' + price,
                     style: TextStyle(
                       color: Color(0xFFCC8053),
                       fontFamily: 'Valera',
@@ -132,17 +133,12 @@ class _Appetizers extends State<Appetizers> {
                     height: 1.0,
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5.0, right: 5.0),
-                  child: Text('Order',
-                      style: TextStyle(
-                          fontFamily: 'Valera',
-                          color: Color(0xFFD17E50),
-                          fontSize: 50.0)),
-                ),
+                
+                Text(getTranslated(context, 'Order'),
+                    style: TextStyle(
+                        fontFamily: 'Valera',
+                        color: Color(0xFFD17E50),
+                        fontSize: 27.0)),
               ],
             ),
           )),

@@ -5,8 +5,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'localization/demo_localization.dart';
 
 class Main extends StatefulWidget {
-  // yesterday i was trying to set local and there's an error in the mainpage. try to solve it 
-   static void setLocale(BuildContext context, Locale locale) {
+  // yesterday i was trying to set local and there's an error in the mainpage. try to solve it
+  static void setLocale(BuildContext context, Locale locale) {
     _MainState state = context.findAncestorStateOfType<_MainState>();
     state.setLocale(locale);
   }
@@ -37,7 +37,13 @@ class _MainState extends State<Main> {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        localeListResolutionCallback: (deviceLocale, supportedLocales) {
+        localeResolutionCallback: (deviceLocale, supportedLocales) {
+          for (var locale in supportedLocales) {
+            if (locale.languageCode == deviceLocale.languageCode &&
+                locale.countryCode == deviceLocale.countryCode) {
+              return deviceLocale;
+            }
+          }
           return supportedLocales.first;
         },
         debugShowCheckedModeBanner: false,
@@ -46,7 +52,12 @@ class _MainState extends State<Main> {
   }
 }
 
-class Page extends StatelessWidget {
+class Page extends StatefulWidget {
+  @override
+  _PageState createState() => _PageState();
+}
+
+class _PageState extends State<Page> {
   @override
   Widget build(BuildContext context) {
     return LoginPage();

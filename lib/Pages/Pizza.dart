@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import 'FoodDetail.dart';
 
 class Pizza extends StatefulWidget {
@@ -30,30 +31,30 @@ class _Pizza extends State<Pizza> {
                   childAspectRatio: 0.8,
                   children: <Widget>[
                     _buildCard(
-                        'Margherita Pizza',
+                        getTranslated(context, 'Pizza1name'),
                         '8000',
-                        'Cheese, Tomatosauce, Vegies',
+                        getTranslated(context, 'Pizza1desc'),
                         'assets/pictures/Pizza/Margherita_Pizza.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Peperoni Pizza',
+                        getTranslated(context, 'Pizza2name'),
                         '10000',
-                        'Cheese, Peperonis, Tomato sause & Vegetables',
+                        getTranslated(context, 'Pizza2desc'),
                         'assets/pictures/Pizza/Peperoni_Pizza.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Pineapple Pizza',
+                        getTranslated(context, 'Pizza3name'),
                         '12000',
-                        'Cheese, Pineappples, sauce',
+                        getTranslated(context, 'Pizza3desc'),
                         'assets/pictures/Pizza/Pineapple_Pizza.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Vegetable Pizza',
+                        getTranslated(context, 'Pizza4name'),
                         '9000',
-                        'Cheese, Tomato sauce & Vegetables',
+                        getTranslated(context, 'Pizza4desc'),
                         'assets/pictures/Pizza/Vegetable_Pizza.jpg',
                         false,
                         context),
@@ -110,7 +111,7 @@ class _Pizza extends State<Pizza> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Text('IQD ' + price,
+                Text(getTranslated(context, 'IQD') + ' ' + price,
                     style: TextStyle(
                       color: Color(0xFFCC8053),
                       fontFamily: 'Valera',
@@ -132,17 +133,14 @@ class _Pizza extends State<Pizza> {
                     height: 1.0,
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5.0, right: 5.0),
-                  child: Text('Order',
+                
+                 
+                 Text(getTranslated(context, 'Order'),
                       style: TextStyle(
                           fontFamily: 'Valera',
                           color: Color(0xFFD17E50),
-                          fontSize: 50.0)),
-                ),
+                          fontSize: 27.0)),
+                
               ],
             ),
           )),

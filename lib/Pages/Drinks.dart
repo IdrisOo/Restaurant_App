@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import 'FoodDetail.dart';
 
 class Drinks extends StatefulWidget {
@@ -30,30 +31,30 @@ class _Drinks extends State<Drinks> {
                   childAspectRatio: 0.8,
                   children: <Widget>[
                     _buildCard(
-                        'Coke ',
+                        getTranslated(context, 'Drink1name'),
                         '500',
-                        '500ml Coke can',
+                        getTranslated(context, 'Drink1desc'),
                         'assets/pictures/Drinks/Coke_Drink.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Mojito',
+                        getTranslated(context, 'Drink2name'),
                         '4000',
-                        'Mojito Drink: lemon and mint',
+                        getTranslated(context, 'Drink2desc'),
                         'assets/pictures/Drinks/Mojito_Drink.png',
                         false,
                         context),
                     _buildCard(
-                        'Sevenup',
+                        getTranslated(context, 'Drink3name'),
                         '500',
-                        '500ml Sevenup can',
+                        getTranslated(context, 'Drink3desc'),
                         'assets/pictures/Drinks/Sevenup_Drink.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Juice',
+                        getTranslated(context, 'Drink4name'),
                         '3000',
-                        'Juices choose what type of juice you want when you order',
+                        getTranslated(context, 'Drink4desc'),
                         'assets/pictures/Drinks/Juice_Drink.jpg',
                         false,
                         context),
@@ -110,7 +111,7 @@ class _Drinks extends State<Drinks> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Text('IQD ' + price,
+                Text(getTranslated(context, 'IQD') + ' ' + price,
                     style: TextStyle(
                       color: Color(0xFFCC8053),
                       fontFamily: 'Valera',
@@ -132,17 +133,12 @@ class _Drinks extends State<Drinks> {
                     height: 1.0,
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5.0, right: 5.0),
-                  child: Text('Order',
+                Text(getTranslated(context, 'Order'),
                       style: TextStyle(
                           fontFamily: 'Valera',
                           color: Color(0xFFD17E50),
-                          fontSize: 50.0)),
-                ),
+                          fontSize: 27.0)),
+                
               ],
             ),
           )),

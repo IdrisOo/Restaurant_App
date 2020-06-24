@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../db/orderModel.dart';
 import '../db/db.dart';
@@ -67,12 +68,13 @@ class _PaymentState extends State<Payment> {
         fontSize: 40,
       );*/
       showDialog(
+          barrierDismissible: false,
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
                 title: Container(
-              width: 500,
-              height: 500,
+              width: 800,
+              height: 800,
               child: StreamBuilder(
                   stream: Firestore.instance
                       .collection('waiting')
@@ -85,13 +87,41 @@ class _PaymentState extends State<Payment> {
                         return Container(
                           color: Colors.greenAccent,
                           child: Center(
-                            child: Text(
-                              'Your food is done!',
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Text(
+                                    getTranslated(context, 'Donecooking') +
+                                        ' ' +
+                                        totalcash.toString(),
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: 'Varela',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                SizedBox(height: 40),
+                                RaisedButton(
+                                  color: Colors.blueAccent,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Text(
+                                    getTranslated(context, 'Done'),
+                                    style: TextStyle(
+                                        fontFamily: 'Varela',
+                                        fontSize: 40,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ],
                             ),
                           ),
                         );
@@ -100,10 +130,10 @@ class _PaymentState extends State<Payment> {
                           color: Colors.redAccent,
                           child: Center(
                             child: Text(
-                              'Your food is still cooking',
+                              getTranslated(context, 'Stillcooking'),
                               style: TextStyle(
                                   fontFamily: 'Varela',
-                                  fontSize: 30,
+                                  fontSize: 40,
                                   color: Colors.white),
                             ),
                           ),
@@ -119,13 +149,16 @@ class _PaymentState extends State<Payment> {
       }
     } else {
       Fluttertoast.showToast(
-        msg: 'Your ordering list is empty',
+        msg: getTranslated(context, 'Emptycart'),
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         backgroundColor: Color(0xFFC88067),
         textColor: Colors.white,
         fontSize: 40,
       );
+      setState(() {
+        loading = false;
+      });
     }
   }
 
@@ -145,87 +178,76 @@ class _PaymentState extends State<Payment> {
                 ),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(height: 20),
-                  Row(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 270,
-                      ),
-                      Text(
-                        'Fast Food',
-                        style: TextStyle(
-                            fontFamily: 'Pacifico',
-                            fontSize: 45.0,
-                            color: Color(0xFFC88067)),
-                      ),
-                      SizedBox(width: 100),
-                      Container(
-                        width: 200,
-                        height: 60,
-                        child: RaisedButton(
-                            splashColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            color: Color(0xFFC88067),
-                            child: Text(
-                              "Send Order",
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontFamily: 'Varela',
-                                  color: Colors.white),
-                            ),
-                            onPressed: () {
-                              sendtofirebase();
-                            }),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 30),
-                ],
+              title: Text(
+                getTranslated(context, 'title'),
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 45.0,
+                    color: Color(0xFFC88067)),
               ),
+
+              //HERE GOES THE PAYMENT
             ),
-            body: ListView(children: <Widget>[
-              Container(
-                width: 1000,
-                height: 1100,
-                child: _futurebuilder(),
-              ),
-              FutureBuilder(
-                future: dbHelper.getpayment(),
-                builder: (BuildContext context, AsyncSnapshot snapshot) {
-                  switch (snapshot.connectionState) {
-                    case ConnectionState.none:
+            body: ListView(
+              children: <Widget>[
+                Container(
+                  width: 1000,
+                  height: 1090,
+                  child: _futurebuilder(),
+                ),
+                FutureBuilder(
+                  future: dbHelper.getpayment(),
+                  builder: (BuildContext context, AsyncSnapshot snapshot) {
+                    switch (snapshot.connectionState) {
+                      case ConnectionState.none:
 
-                    case ConnectionState.active:
+                      case ConnectionState.active:
 
-                    case ConnectionState.waiting:
+                      case ConnectionState.waiting:
 
-                    case ConnectionState.done:
-                      return check();
-                  }
+                      case ConnectionState.done:
+                        return check();
+                    }
 
-                  return Container();
+                    return Container();
+                  },
+                ),
+              ],
+            ),
+            floatingActionButton: Container(
+              width: 200,
+              height: 100,
+              child: FloatingActionButton.extended(
+                backgroundColor: Color(0xFFC88067),
+                label: Text(
+                  getTranslated(context, 'Sendorder'),
+                  style: TextStyle(
+                      fontSize: 30, fontFamily: 'Varela', color: Colors.white),
+                ),
+                onPressed: () {
+                  sendtofirebase();
                 },
               ),
-            ]));
+            ),
+          );
   }
 
   Widget check() {
     if (totalcash == null) {
       return Center(
         child: Text(
-          'TotalPayment: 0 IQD',
-          style: TextStyle(fontSize: 30, fontFamily: 'Varela'),
+          getTranslated(context, 'Totalpayment0'),
+          style: TextStyle(fontSize: 35, fontFamily: 'Varela'),
         ),
       );
     } else
       return Center(
         child: Text(
-          'TotalPayment: ' + totalcash.toString() + 'IQD',
-          style: TextStyle(fontSize: 30, fontFamily: 'Varela'),
+          getTranslated(context, 'Totalpayment') + ' ' +
+              totalcash.toString() +
+              ' ' +
+              getTranslated(context, 'IQD'),
+          style: TextStyle(fontSize: 35, fontFamily: 'Varela'),
         ),
       );
   }
@@ -245,7 +267,7 @@ class _PaymentState extends State<Payment> {
               if (snapshot.data.length == 0) {
                 return Center(
                     child: Text(
-                  '    You didn\'t order anything yet.\nGo back and try to order items first.',
+                  getTranslated(context, 'Noorderdesc'),
                   style: TextStyle(
                       fontSize: 50,
                       fontFamily: 'Varela',
@@ -292,7 +314,7 @@ class _PaymentState extends State<Payment> {
                                 ),
                                 SizedBox(height: 20),
                                 Text(
-                                  'Total: ${snapshot.data[index].amount.toString()}',
+                                 getTranslated(context, 'Total') + ": " + snapshot.data[index].amount.toString(),
                                   style: TextStyle(
                                       color: Color(0xFF575E67),
                                       fontFamily: 'Varela',
@@ -300,7 +322,7 @@ class _PaymentState extends State<Payment> {
                                 ),
                                 SizedBox(height: 20),
                                 Text(
-                                  'Price: ${snapshot.data[index].totalPrice.toString()}',
+                                  getTranslated(context, "Price") + ": "+ snapshot.data[index].totalPrice.toString(),
                                   style: TextStyle(
                                       color: Color(0xFF575E67),
                                       fontFamily: 'Varela',
@@ -318,7 +340,7 @@ class _PaymentState extends State<Payment> {
                                               new BorderRadius.circular(18.0),
                                           side: BorderSide(color: Colors.red)),
                                       child: Text(
-                                        "Delete Order",
+                                        getTranslated(context, 'Deleteorder'),
                                         style: TextStyle(
                                             fontSize: 30,
                                             fontFamily: 'Varela',

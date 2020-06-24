@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:restauranttest/Pages/DropdownLang.dart';
+import 'package:restauranttest/localization/demo_localization.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
+import '../main.dart';
 import 'BottomBar.dart';
 import 'Burgers.dart';
 import 'Appetizers.dart';
@@ -34,7 +37,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
       default:
         _temp = Locale(language.languageCode, 'US');
     }
-   // MyApp.setLocale(context, _temp);
+   Main.setLocale(context, _temp);
   }
 
   @override
@@ -60,7 +63,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                           .map<DropdownMenuItem<Language>>(
                               (lang) => DropdownMenuItem(
                                     value: lang,
-                                    child: Text(lang.name),
+                                    child: Text(lang.name,style: TextStyle(fontFamily: 'Varela',fontSize: 40),),
                                   ))
                           .toList()))
             ],
@@ -73,7 +76,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                   height: 20,
                 ),
                 Text(
-                  'Fast Food',
+                  getTranslated(context, 'title'),
                   style: TextStyle(
                       fontFamily: 'Pacifico',
                       fontSize: 45.0,
@@ -93,7 +96,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 320.0),
-                child: Text("Categories",
+                child: Text(getTranslated(context, 'Categories'),
                     style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 45.0,
@@ -113,25 +116,25 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                   tabs: <Widget>[
                     Tab(
                       child: Text(
-                        'Burger',
+                        getTranslated(context, 'Burger'),
                         style: TextStyle(fontFamily: 'Varela', fontSize: 37.0),
                       ),
                     ),
                     Tab(
                       child: Text(
-                        'Pizza',
+                        getTranslated(context, 'Pizza'),
                         style: TextStyle(fontFamily: 'Varela', fontSize: 37.0),
                       ),
                     ),
                     Tab(
                       child: Text(
-                        'Drinks',
+                        getTranslated(context, 'Drinks'),
                         style: TextStyle(fontFamily: 'Varela', fontSize: 37.0),
                       ),
                     ),
                     Tab(
                       child: Text(
-                        'Appetizers',
+                       getTranslated(context, 'Appetizers') ,
                         style: TextStyle(fontFamily: 'Varela', fontSize: 37.0),
                       ),
                     ),

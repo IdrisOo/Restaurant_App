@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import 'FoodDetail.dart';
 
 class Burger extends StatefulWidget {
@@ -30,30 +31,30 @@ class _Burger extends State<Burger> {
                   childAspectRatio: 0.8,
                   children: <Widget>[
                     _buildCard(
-                        'Regular burger',
+                        getTranslated(context, 'Burger1name'),
                         '6500',
-                        '100 grams of burger, tomatos, ketchup, mustard, lettis and onions on top',
+                       getTranslated(context, 'Burger1desc'),
                         'assets/pictures/Burger/Regular_Burger.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Cheese burger',
+                        getTranslated(context, 'Burger2name'),
                         '8000',
-                        '100 grams of burger, tomatos, onions, lettis, cheese and ketchup',
+                       'Burger2desc',
                         'assets/pictures/Burger/Cheese_Burger.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Mushroom burger',
+                        getTranslated(context, 'Burger3name'),
                         '10000',
-                        '100 grams of burger, tomatos, onions, lettis, cheese, ketchup and mushrooms',
+                        getTranslated(context, 'Burger3name'),
                         'assets/pictures/Burger/Mushroom_Burger.jpg',
                         false,
                         context),
                     _buildCard(
-                        'Double burger',
+                        getTranslated(context, 'Burger4name'),
                         '12500',
-                        '200 grams of burger , tomatos, onion, ketchup, carmalized onions',
+                       getTranslated(context, 'Burger4name'),
                         'assets/pictures/Burger/Double_Burger.jpg',
                         false,
                         context),
@@ -110,7 +111,7 @@ class _Burger extends State<Burger> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Text('IQD ' + price,
+                Text(getTranslated(context, 'IQD') + ' ' + price,
                     style: TextStyle(
                       color: Color(0xFFCC8053),
                       fontFamily: 'Valera',
@@ -132,17 +133,15 @@ class _Burger extends State<Burger> {
                     height: 1.0,
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5.0, right: 5.0),
-                  child: Text('Order',
+                
+               
+                  
+               Text(getTranslated(context, 'Order'),
                       style: TextStyle(
                           fontFamily: 'Valera',
                           color: Color(0xFFD17E50),
-                          fontSize: 50.0)),
-                ),
+                          fontSize: 27.0)),
+                
               ],
             ),
           )),

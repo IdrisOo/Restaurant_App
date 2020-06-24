@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restauranttest/localization/localization_constants.dart';
 import '../Pages/Paypage.dart';
 
 class BottomBar extends StatelessWidget {
@@ -14,7 +15,7 @@ class BottomBar extends StatelessWidget {
               return Payment();
             }));
           },
-          label: Text("Your Orders",
+          label: Text(getTranslated(context, 'Yourorders'),
               style: TextStyle(
                   fontFamily: 'Varela',
                   fontSize: 30.0,

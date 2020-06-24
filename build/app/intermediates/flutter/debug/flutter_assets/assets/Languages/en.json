@@ -43,6 +43,16 @@
     "Appetizer4desc": "5 Pieces of onion rings",
     "Deleteorder":"Delete Order",
     "Totalpayment": "Total Payment",
+    "Totalpayment0" : "Total Payment: 0 IQD",
     "Sendorder": "Send Order",
-    "Total" : "Total"
+    "Total" : "Total",
+    "Order" : "Order",
+    "IQD" : "IQD",
+    "Noorderdesc" : " You didn't order anything yet. \n Go back and try to order items first.",
+    "Emptycart" : "Your ordering list is empty",
+    "Stillcooking" : "Your food is still cooking",
+    "Donecooking" : "Your food is done! \n you can go and get your food now! \n Total Payment: ",
+    "Addeditem" : "Your item is added",
+    "Addednone" : "please add at least one item",
+    "Done" : "Done"
 }
