@@ -50,11 +50,11 @@ class _PaymentState extends State<Payment> {
             x[i][1].toString(),
             x[i][2].toString(),
             _tableNumber,
-            totalcash.toString());
+            );
       }
 
       await DatabaseService().isWaiting(_tableNumber);
-
+      await DatabaseService().sendingPrice(_tableNumber, totalcash.toString());
       setState(() {
         loading = false;
       });
@@ -243,7 +243,8 @@ class _PaymentState extends State<Payment> {
     } else
       return Center(
         child: Text(
-          getTranslated(context, 'Totalpayment') + ' ' +
+          getTranslated(context, 'Totalpayment') +
+              ' ' +
               totalcash.toString() +
               ' ' +
               getTranslated(context, 'IQD'),
@@ -314,7 +315,9 @@ class _PaymentState extends State<Payment> {
                                 ),
                                 SizedBox(height: 20),
                                 Text(
-                                 getTranslated(context, 'Total') + ": " + snapshot.data[index].amount.toString(),
+                                  getTranslated(context, 'Total') +
+                                      ": " +
+                                      snapshot.data[index].amount.toString(),
                                   style: TextStyle(
                                       color: Color(0xFF575E67),
                                       fontFamily: 'Varela',
@@ -322,7 +325,10 @@ class _PaymentState extends State<Payment> {
                                 ),
                                 SizedBox(height: 20),
                                 Text(
-                                  getTranslated(context, "Price") + ": "+ snapshot.data[index].totalPrice.toString(),
+                                  getTranslated(context, "Price") +
+                                      ": " +
+                                      snapshot.data[index].totalPrice
+                                          .toString(),
                                   style: TextStyle(
                                       color: Color(0xFF575E67),
                                       fontFamily: 'Varela',

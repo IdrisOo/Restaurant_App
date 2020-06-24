@@ -40,7 +40,7 @@ class _Burger extends State<Burger> {
                     _buildCard(
                         getTranslated(context, 'Burger2name'),
                         '8000',
-                       'Burger2desc',
+                       getTranslated(context, 'Burger2desc'),
                         'assets/pictures/Burger/Cheese_Burger.jpg',
                         false,
                         context),

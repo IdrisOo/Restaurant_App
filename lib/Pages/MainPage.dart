@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:restauranttest/Pages/DropdownLang.dart';
-import 'package:restauranttest/localization/demo_localization.dart';
 import 'package:restauranttest/localization/localization_constants.dart';
 import '../main.dart';
 import 'BottomBar.dart';
@@ -10,7 +9,6 @@ import 'Pizza.dart';
 import 'Drinks.dart';
 
 class MyApp extends StatefulWidget {
- 
   @override
   State<StatefulWidget> createState() {
     return _MyAppState();
@@ -24,6 +22,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     super.initState();
     _tabController = TabController(length: 4, vsync: this);
   }
+
 //language changing need help.
   void _changeLanguage(Language language) {
     Locale _temp;
@@ -37,7 +36,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
       default:
         _temp = Locale(language.languageCode, 'US');
     }
-   Main.setLocale(context, _temp);
+    Main.setLocale(context, _temp);
   }
 
   @override
@@ -63,7 +62,11 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                           .map<DropdownMenuItem<Language>>(
                               (lang) => DropdownMenuItem(
                                     value: lang,
-                                    child: Text(lang.name,style: TextStyle(fontFamily: 'Varela',fontSize: 40),),
+                                    child: Text(
+                                      lang.name,
+                                      style: TextStyle(
+                                          fontFamily: 'Varela', fontSize: 40),
+                                    ),
                                   ))
                           .toList()))
             ],
@@ -134,7 +137,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                     ),
                     Tab(
                       child: Text(
-                       getTranslated(context, 'Appetizers') ,
+                        getTranslated(context, 'Appetizers'),
                         style: TextStyle(fontFamily: 'Varela', fontSize: 37.0),
                       ),
                     ),
