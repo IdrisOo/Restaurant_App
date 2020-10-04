@@ -44,8 +44,9 @@ class _Appetizers extends State<Appetizers> {
                         'assets/pictures/Appetizers/Fries.jpg',
                         false,
                         context),
-                    _buildCard(
+                    _salesCard(
                         getTranslated(context, 'Appetizer3name'),
+                        '5000',
                         '6000',
                         getTranslated(context, 'Appetizer3desc'),
                         'assets/pictures/Appetizers/GarlicBread.jpg',
@@ -65,9 +66,10 @@ class _Appetizers extends State<Appetizers> {
         ));
   }
 
-  Widget _buildCard(
+  Widget _salesCard(
     String name,
     String price,
+    String oldPrice,
     String desc,
     String imgPath,
     bool added,
@@ -111,11 +113,24 @@ class _Appetizers extends State<Appetizers> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Text(getTranslated(context, 'IQD') + ' ' + price,
+                Text(getTranslated(context, 'IQD') + ' ' + oldPrice,
                     style: TextStyle(
+                      decoration: TextDecoration.lineThrough,
+                      color: Colors.redAccent,
+                      fontFamily: 'Valera',
+                      fontSize: 20.0,
+                    )),
+                Text(
+                    getTranslated(context, 'NewPrice') +
+                        ' ' +
+                        getTranslated(context, 'IQD') +
+                        ' ' +
+                        price,
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
                       color: Color(0xFFCC8053),
                       fontFamily: 'Valera',
-                      fontSize: 30.0,
+                      fontSize: 25.0,
                     )),
                 SizedBox(
                   height: 20,
@@ -127,13 +142,12 @@ class _Appetizers extends State<Appetizers> {
                       fontSize: 30.0,
                     )),
                 Padding(
-                  padding: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(10.0),
                   child: Container(
                     color: Color(0xFFEBEBEB),
                     height: 1.0,
                   ),
                 ),
-                
                 Text(getTranslated(context, 'Order'),
                     style: TextStyle(
                         fontFamily: 'Valera',
@@ -144,6 +158,84 @@ class _Appetizers extends State<Appetizers> {
           )),
     );
   }
+}
+
+Widget _buildCard(
+  String name,
+  String price,
+  String desc,
+  String imgPath,
+  bool added,
+  context,
+) {
+  return Padding(
+    padding: EdgeInsets.only(top: 15.0, bottom: 15.0, left: 15.0, right: 15.0),
+    child: InkWell(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => FoodDetail(
+                    assetpath: imgPath,
+                    foodprice: price,
+                    foodname: name,
+                    fooddesc: desc,
+                  )));
+        },
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 3.0,
+                    blurRadius: 5.0)
+              ],
+              color: Colors.white),
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 15,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15.0),
+                child: Image.asset(
+                  imgPath,
+                  width: 300,
+                  height: 250.0,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              SizedBox(height: 20.0),
+              Text(getTranslated(context, 'IQD') + ' ' + price,
+                  style: TextStyle(
+                    color: Color(0xFFCC8053),
+                    fontFamily: 'Valera',
+                    fontSize: 30.0,
+                  )),
+              SizedBox(
+                height: 20,
+              ),
+              Text(name,
+                  style: TextStyle(
+                    color: Color(0xFF575E67),
+                    fontFamily: 'Valera',
+                    fontSize: 30.0,
+                  )),
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Container(
+                  color: Color(0xFFEBEBEB),
+                  height: 1.0,
+                ),
+              ),
+              Text(getTranslated(context, 'Order'),
+                  style: TextStyle(
+                      fontFamily: 'Valera',
+                      color: Color(0xFFD17E50),
+                      fontSize: 27.0)),
+            ],
+          ),
+        )),
+  );
 }
 
 /*

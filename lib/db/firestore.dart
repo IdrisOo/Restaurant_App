@@ -7,12 +7,15 @@ class DatabaseService {
   final CollectionReference orderCollection =
       Firestore.instance.collection('orders');
 
-  Future sendingPrice(String tablenumber,String price) async{
-    final DocumentReference documentReference = Firestore.instance.collection('orders').document(tablenumber);
-    documentReference.setData({
-      'totalprice' : price
-    });
+  Future sendingPrice(String tablenumber, String price) async {
+    final DocumentReference documentReference =
+        Firestore.instance.collection('orders').document(tablenumber);
+    final DocumentReference documentReferences =
+        Firestore.instance.collection('TotalPrices').document();
+    documentReference.setData({'totalprice': price});
+    documentReferences.setData({'totalprice': int.parse(price)});
   }
+
   Future isWaiting(String tablenumber) async {
     final CollectionReference orderwaitingCollectgion =
         Firestore.instance.collection('waiting');
@@ -38,14 +41,13 @@ class DatabaseService {
     }).whenComplete(() => print('created!'));
   }*/
 
-  Future insertOrder(String name, String amount, String price,
-      String tablenumber) async {
+  Future insertOrder(
+      String name, String amount, String price, String tablenumber) async {
     return await orderCollection.document(uid).setData({
       'tablenumber': tablenumber,
       'name': name,
       'amount': amount,
       'price': price,
-      
     });
   }
 }

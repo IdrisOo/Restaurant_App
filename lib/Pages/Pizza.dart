@@ -127,20 +127,17 @@ class _Pizza extends State<Pizza> {
                       fontSize: 30.0,
                     )),
                 Padding(
-                  padding: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(10.0),
                   child: Container(
                     color: Color(0xFFEBEBEB),
                     height: 1.0,
                   ),
                 ),
-                
-                 
-                 Text(getTranslated(context, 'Order'),
-                      style: TextStyle(
-                          fontFamily: 'Valera',
-                          color: Color(0xFFD17E50),
-                          fontSize: 27.0)),
-                
+                Text(getTranslated(context, 'Order'),
+                    style: TextStyle(
+                        fontFamily: 'Valera',
+                        color: Color(0xFFD17E50),
+                        fontSize: 27.0)),
               ],
             ),
           )),

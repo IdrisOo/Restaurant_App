@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (val) =>
                             val.isEmpty ? 'Enter an email' : null,
                         onSaved: (String value) {
-                          tablenum = value;
+                          email = value;
                         }),
                     //Table pass field
 
@@ -140,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (val) =>
                             val.isEmpty ? 'Enter a password' : null,
                         onSaved: (String value) {
-                          tablenum = value;
+                          pass = value;
                         }),
                     //button
                     SizedBox(height: 100),

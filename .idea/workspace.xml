@@ -2,24 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c400b42-8810-4435-9afd-2c8d0e696397" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/1e662af6c05c4ba28e735e75235a1cbd/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/e8e3096bcc2607b8cb7f2d4959e3ad55/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/e8e3096bcc2607b8cb7f2d4959e3ad55/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/e8e3096bcc2607b8cb7f2d4959e3ad55/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/e8e3096bcc2607b8cb7f2d4959e3ad55/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/dex/debug/mergeDexDebug/out/classes3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/dex/debug/mergeDexDebug/out/classes3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/.last_build_id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/isolate_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/isolate_snapshot_data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/vm_snapshot_data" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/vm_snapshot_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_native_libs/debug/out/lib/x86/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_native_libs/debug/out/lib/x86/libflutter.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_native_libs/debug/out/lib/x86_64/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_native_libs/debug/out/lib/x86_64/libflutter.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/stripped_native_libs/debug/out/lib/x86/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/stripped_native_libs/debug/out/lib/x86/libflutter.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/stripped_native_libs/debug/out/lib/x86_64/libflutter.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/stripped_native_libs/debug/out/lib/x86_64/libflutter.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/db/firestore.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/db/firestore.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/generated/source/buildConfig/debug/io/flutter/plugins/firebase/cloudfirestore/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/generated/source/buildConfig/debug/io/flutter/plugins/firebase/cloudfirestore/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/compile_library_classes/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/full_jar/debug/createFullJarDebug/full.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/full_jar/debug/createFullJarDebug/full.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$4$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$5$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$5$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$6$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$6$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$6$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$7$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$7$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$7$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$7$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$8$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$8$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$8$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$8$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$DocumentObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$DocumentObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$EventObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$EventObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$TransactionResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin$TransactionResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/FirestoreMessageCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/FirestoreMessageCodec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/FlutterFirebaseAppRegistrar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/javac/debug/classes/io/flutter/plugins/firebase/cloudfirestore/FlutterFirebaseAppRegistrar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/packaged-classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/packaged-classes/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/intermediates/runtime_library_classes/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cloud_firestore/outputs/aar/cloud_firestore-debug.aar" beforeDir="false" afterPath="$PROJECT_DIR$/build/cloud_firestore/outputs/aar/cloud_firestore-debug.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/Burgers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/Burgers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/Drinks.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/Drinks.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Pages/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Pages/LoginPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +100,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DeliveryApp" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -59,42 +118,48 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Restaurant_Project" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="553" y="153" key="FileChooserDialogImpl" timestamp="1591445636782">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596384517708">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="553" y="153" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591445636782" />
-    <state width="661" height="178" key="GridCell.Tab.0.bottom" timestamp="1591798065651">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1596384517708" />
+    <state x="463" y="317" key="FileChooserDialogImpl" timestamp="1600619340741">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="463" y="317" key="FileChooserDialogImpl/-1366.150.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1600619340741" />
+    <state width="661" height="178" key="GridCell.Tab.0.bottom" timestamp="1596385864486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591798065651" />
-    <state width="661" height="178" key="GridCell.Tab.0.center" timestamp="1591798065651">
+    <state width="661" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596385864486" />
+    <state width="661" height="178" key="GridCell.Tab.0.center" timestamp="1596385864486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591798065651" />
-    <state width="661" height="178" key="GridCell.Tab.0.left" timestamp="1591798065651">
+    <state width="661" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596385864486" />
+    <state width="661" height="178" key="GridCell.Tab.0.left" timestamp="1596385864485">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591798065651" />
-    <state width="661" height="178" key="GridCell.Tab.0.right" timestamp="1591798065651">
+    <state width="661" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596385864485" />
+    <state width="661" height="178" key="GridCell.Tab.0.right" timestamp="1596385864486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591798065651" />
-    <state x="194" y="7" key="SettingsEditor" timestamp="1591798890280">
+    <state width="661" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596385864486" />
+    <state x="194" y="7" key="SettingsEditor" timestamp="1596385810817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="194" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591798890280" />
-    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591798840716">
+    <state x="194" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596385810817" />
+    <state x="-304" y="303" width="1182" height="735" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1597795514479">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1591798840716" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1591798917527">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="-304" y="303" width="1182" height="735" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1597795514479" />
+    <state x="710" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1600619324703">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1591798917527" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1591617991596">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591617991596" />
+    <state x="710" y="267" key="com.intellij.ide.util.TipDialog/-1366.150.1366.728/0.0.2560.1040@0.0.2560.1040" timestamp="1600619324703" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597795501601" />
   </component>
 </project>

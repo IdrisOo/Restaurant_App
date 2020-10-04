@@ -46,11 +46,11 @@ class _PaymentState extends State<Payment> {
       for (int i = 0; i < x.length; i++) {
         //older version of to send
         await DatabaseService().insertOrder(
-            x[i][0].toString(),
-            x[i][1].toString(),
-            x[i][2].toString(),
-            _tableNumber,
-            );
+          x[i][0].toString(),
+          x[i][1].toString(),
+          x[i][2].toString(),
+          _tableNumber,
+        );
       }
 
       await DatabaseService().isWaiting(_tableNumber);
@@ -129,12 +129,21 @@ class _PaymentState extends State<Payment> {
                         return Container(
                           color: Colors.redAccent,
                           child: Center(
-                            child: Text(
-                              getTranslated(context, 'Stillcooking'),
-                              style: TextStyle(
-                                  fontFamily: 'Varela',
-                                  fontSize: 40,
-                                  color: Colors.white),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  getTranslated(context, 'Stillcooking'),
+                                  style: TextStyle(
+                                      fontFamily: 'Varela',
+                                      fontSize: 40,
+                                      color: Colors.white),
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                              ],
                             ),
                           ),
                         );

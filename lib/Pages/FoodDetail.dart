@@ -141,8 +141,6 @@ class _FoodDetail extends State<FoodDetail> {
                       Container(
                           width: 400,
                           height: 600,
-                          
-                          
                           child: Card(
                               color: Color(0xFFF17532),
                               child: Column(children: <Widget>[
@@ -175,16 +173,21 @@ class _FoodDetail extends State<FoodDetail> {
                                   height: 100,
                                   width:
                                       MediaQuery.of(context).size.width - 50.0,
-                                  child: Text(getTranslated(context, 'Price') + ' ' + widget.foodprice + ' ' + getTranslated(context, 'IQD'),
+                                  child: Text(
+                                      getTranslated(context, 'Price') +
+                                          ' ' +
+                                          widget.foodprice +
+                                          ' ' +
+                                          getTranslated(context, 'IQD'),
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                        shadows: [
-                                          Shadow(
-                                            blurRadius: 1.0,
-                                            color: Colors.black,
-                                            offset: Offset(0.0, 0.0),
-                                          )
-                                        ],
+                                          shadows: [
+                                            Shadow(
+                                              blurRadius: 1.0,
+                                              color: Colors.black,
+                                              offset: Offset(0.0, 0.0),
+                                            )
+                                          ],
                                           fontFamily: 'Valera',
                                           fontSize: 50.0,
                                           color: Colors.white)),
@@ -203,7 +206,8 @@ class _FoodDetail extends State<FoodDetail> {
                                               new BorderRadius.circular(18.0),
                                           side: BorderSide(color: Colors.red)),
                                       color: Colors.white,
-                                      child: Text(getTranslated(context, 'Addorder'),
+                                      child: Text(
+                                          getTranslated(context, 'Addorder'),
                                           style: TextStyle(
                                               fontFamily: 'Varela',
                                               fontSize: 30,
@@ -219,7 +223,7 @@ class _FoodDetail extends State<FoodDetail> {
                             new BoxShadow(
                                 color: Color(0xFFC88067),
                                 blurRadius: 4.0,
-                                offset: Offset(4.0,3.0)),
+                                offset: Offset(4.0, 3.0)),
                           ]),
                           child: Card(
                             child: Column(
@@ -230,7 +234,8 @@ class _FoodDetail extends State<FoodDetail> {
                                 Container(
                                     height: 200,
                                     width: 300,
-                                    child: Text(getTranslated(context, 'ItemNumber'),
+                                    child: Text(
+                                        getTranslated(context, 'ItemNumber'),
                                         style: TextStyle(
                                             fontFamily: 'Varela',
                                             fontSize: 30,
