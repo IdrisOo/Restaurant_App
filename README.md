@@ -1,6 +1,5 @@
 # Restaurant_App
-An application for a restaurant that shows a menu for the customers and provides them with the ability to make orders and recieve the orders without the need of a waiter
-in between making the order and recieving it. 
+An application for a restaurant that shows a menu for the customers and provides them with the ability to make orders and receive the orders without the need of a waiter in between making the order and receiving it.
  
 # Graduation Project Details 🎓
 - Student: Idris Sinan Dhanoon.
